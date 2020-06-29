@@ -1,0 +1,29 @@
+.nav__burger-container {
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+.nav__burger {
+    height: 2px;
+    width: 100%;
+    background: $dark-text;
+    position: relative;
+
+    &::before, &::after {
+        content: '';
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        background: $dark-text;
+    }
+    &::before {
+        top: 5px;
+    }
+    &::after {
+        top: -5px;
+    }
+}

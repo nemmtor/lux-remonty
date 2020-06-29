@@ -1,5 +1,18 @@
+@import './burger.scss';
+
 .nav {
     display: flex;
+    align-items: center;
+    font-size: .8rem;
+    padding: .5rem $horizontal-padding;
+
+    &__logo {
+        height: 3rem;
+    }
+
+    &__phone {
+        margin-left: .8rem;
+    }
 
     &__menu {
         display: none;
