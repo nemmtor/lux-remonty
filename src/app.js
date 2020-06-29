@@ -1,1 +1,2 @@
-console.log('Hello from js');
+import 'normalize.css';
+import './styles/global.scss';
