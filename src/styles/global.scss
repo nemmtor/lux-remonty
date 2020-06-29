@@ -4,6 +4,12 @@ $main-color: #2e2d60;
 $second-color: #454491;
 $contrast-color: #eabc8c;
 
+@import './header/header.scss';
+
 html {
     font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    color: $dark-text;
 }
