@@ -30,6 +30,7 @@
     },
     "dependencies": {
         "html-webpack-plugin": "^4.3.0",
+        "jump.js": "^1.0.2",
         "normalize.css": "^8.0.1",
         "webpack": "^4.43.0",
         "webpack-merge": "^4.2.2"

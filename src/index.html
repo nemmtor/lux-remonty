@@ -38,79 +38,99 @@
         <title>Lux Adam Jankowski - Toruń remonty, prace wykończeniowe</title>
     </head>
     <body>
+        <nav class="nav">
+            <img
+                class="nav__logo"
+                src="./assets/logo.svg"
+                alt="Lux Adam Jankowski"
+            />
+            <p class="nav__phone">Zadzwoń - 691 694 580</p>
+            <!-- BURGER -->
+            <div class="nav__burger-container">
+                <div class="nav__burger"></div>
+            </div>
+            <ul class="nav__menu">
+                <li class="nav__menu-item">
+                    <a href="#home">Strona główna</a>
+                </li>
+                <li class="nav__menu-item">
+                    <a href="#about">Dlaczego LUX?</a>
+                </li>
+                <li class="nav__menu-item">
+                    <a href="#offer">Oferta</a>
+                </li>
+                <li class="nav__menu-item">
+                    <a href="#opinions">Opinie</a>
+                </li>
+                <li class="nav__menu-item">
+                    <a href="#contact">Kontakt</a>
+                </li>
+            </ul>
+        </nav>
         <header class="header">
-            <nav class="nav">
-                <img
-                    class="nav__logo"
-                    src="./assets/logo.svg"
-                    alt="Lux Adam Jankowski"
-                />
-                <p class="nav__phone">Zadzwoń - 691 694 580</p>
-                <!-- BURGER -->
-                <div class="nav__burger-container">
-                    <div class="nav__burger"></div>
-                </div>
-                <ul class="nav__menu">
-                    <li class="nav__menu-item">
-                        <a href="#home">Strona główna</a>
-                    </li>
-                    <li class="nav__menu-item">
-                        <a href="#about">Dlaczego LUX?</a>
-                    </li>
-                    <li class="nav__menu-item">
-                        <a href="#offer">Oferta</a>
-                    </li>
-                    <li class="nav__menu-item">
-                        <a href="#opinions">Opinie</a>
-                    </li>
-                    <li class="nav__menu-item">
-                        <a href="#contact">Kontakt</a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- HERO -->
-            <section class="hero">
-                <h1 class="hero__header">LUX Adam Jankowski</h1>
-                <p class="hero__text">
-                    Kompleksowe wykończenia oraz pojedyńcze prace remontowe
-                </p>
-                <button class="hero__cta">WIĘCEJ</button>
-            </section>
+            <h1 class="header__header">
+                <span class="header__header-company">LUX</span
+                ><span class="header__header-owner">
+                    Adam Jankowski
+                </span>
+            </h1>
+            <p class="header__text">
+                Kompleksowe wykończenia oraz pojedyńcze prace remontowe
+            </p>
+            <button class="header__cta" data-scroll data-target="#about">
+                Więcej
+            </button>
         </header>
         <main class="main">
             <section class="section" id="about">
                 <h2 class="section__header">Dlaczego my?</h2>
-                <article class="about__item">
-                    <img src="./assets/logo.svg" alt="" />
-                    <h3 class="about__item-header">Profesjonalizm</h3>
-                    <p class="about__item-text">
-                        <strong>Profesjonalne</strong> i
-                        <strong>indywidualne</strong> podejście do twojego
-                        zlecenia
-                    </p>
-                </article>
-                <article class="about__item">
-                    <img src="./assets/logo.svg" alt="" />
-                    <h3 class="about__item-header">Konkurencyjne ceny</h3>
-                    <p class="about__item-text">
-                        <strong>Dopasowane</strong> do twoich wymogów oraz
-                        możliwości
-                    </p>
-                </article>
-                <article class="about__item">
-                    <img src="./assets/logo.svg" alt="" />
-                    <h3 class="about__item-header">Szybkie terminy</h3>
-                    <p class="about__item-text">
-                        Nie czekaj - zadzwoń aby się umówić
-                    </p>
-                </article>
-                <article class="about__item about__item--last">
-                    <img src="./assets/logo.svg" alt="" />
-                    <h3 class="about__item-header">
-                        Darmowa i niezobowiązująca wycena
-                    </h3>
-                    <button class="about__cta">KONTAKT</button>
-                </article>
+                <div class="about__items">
+                    <article class="about__item">
+                        <div class="about__item-icon">
+                            <img src="./assets/pro.svg" alt="" />
+                        </div>
+                        <h3 class="about__item-header">Profesjonalizm</h3>
+                        <p class="about__item-text">
+                            <strong>Profesjonalne</strong> i
+                            <strong>indywidualne</strong> podejście do twojego
+                            zlecenia
+                        </p>
+                    </article>
+                    <article class="about__item">
+                        <div class="about__item-icon">
+                            <img src="./assets/cash.svg" alt="" />
+                        </div>
+                        <h3 class="about__item-header">Konkurencyjne ceny</h3>
+                        <p class="about__item-text">
+                            <strong>Dopasowane</strong> do twoich wymogów oraz
+                            możliwości
+                        </p>
+                    </article>
+                    <article class="about__item">
+                        <div class="about__item-icon">
+                            <img src="./assets/clock.svg" alt="" />
+                        </div>
+                        <h3 class="about__item-header">Szybkie terminy</h3>
+                        <p class="about__item-text">
+                            Nie czekaj - zadzwoń aby się umówić
+                        </p>
+                    </article>
+                    <article class="about__item">
+                        <div class="about__item-icon">
+                            <img src="./assets/price.svg" alt="" />
+                        </div>
+                        <h3 class="about__item-text">
+                            Darmowa i niezobowiązująca wycena
+                        </h3>
+                        <button
+                            class="about__cta"
+                            data-scroll
+                            data-target="#contact"
+                        >
+                            Kontakt
+                        </button>
+                    </article>
+                </div>
             </section>
             <section class="section" id="offer">
                 <h2 class="section__header">Oferta</h2>

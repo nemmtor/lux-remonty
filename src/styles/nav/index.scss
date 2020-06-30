@@ -3,15 +3,20 @@
 .nav {
     display: flex;
     align-items: center;
-    font-size: .8rem;
-    padding: .5rem $horizontal-padding;
+    font-size: 0.8rem;
+    padding: 0.5rem $horizontal-padding;
+    background: $light-text;
+    z-index: 1000;
+
+    position: sticky;
+    top: 0;
 
     &__logo {
         height: 3rem;
     }
 
     &__phone {
-        margin-left: .8rem;
+        margin-left: 0.8rem;
     }
 
     &__menu {

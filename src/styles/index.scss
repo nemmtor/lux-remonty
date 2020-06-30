@@ -5,9 +5,18 @@ $second-color: #454491;
 $contrast-color: #eabc8c;
 
 $horizontal-padding: 1.5rem;
-$vertical-padding: 3rem;
+$vertical-padding: 2.5rem;
 
-@import './header/header.scss';
+@import './nav';
+@import './header';
+@import './section';
+@import './about';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 html {
     font-family: 'Montserrat', sans-serif;
