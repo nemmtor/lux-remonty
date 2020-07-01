@@ -4,7 +4,12 @@ const TIME_BETWEEN_SLIDES = 3;
 
 const timeline = gsap.timeline({
     repeat: -1,
-    defaults: { duration: 1, delay: TIME_BETWEEN_SLIDES, ease: 'power1.in' },
+    defaults: {
+        stagger: 1,
+        duration: 1,
+        delay: TIME_BETWEEN_SLIDES,
+        ease: 'power1.in',
+    },
 });
 
 timeline
