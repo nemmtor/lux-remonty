@@ -1,0 +1,13 @@
+.section--offer {
+    background: $dark-text;
+    color: $light-text;
+}
+
+.offer__item {
+    margin-bottom: 3rem;
+
+    &-image {
+        width: 100%;
+        height: auto;
+    }
+}
