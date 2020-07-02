@@ -5,10 +5,13 @@
     z-index: 1;
     &::before {
         position: absolute;
-        top: 0;
+        top: -30px;
         left: 50%;
-        transform: translateX(-50%);
         content: '';
+        width: 60px;
+        height: 60px;
+        background: #fff;
+        transform: rotate(45deg) translateX(-50%);
     }
     &::after {
         background-repeat: no-repeat;

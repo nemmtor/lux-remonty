@@ -1,5 +1,17 @@
 .section--contact {
     background: #eee;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        left: -50px;
+        width: 130%;
+        height: 50px;
+        background: #eee;
+        transform: rotate(5deg);
+    }
 }
 
 .contact__details {
