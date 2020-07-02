@@ -1,6 +1,7 @@
 .section--contact {
     background: #eee;
     position: relative;
+    overflow: hidden;
 
     &::before {
         content: '';
