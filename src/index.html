@@ -67,7 +67,7 @@
                 </li>
             </ul>
         </nav>
-        <header class="header">
+        <header class="header" id="header">
             <h1 class="header__header">
                 <span class="header__header-company">LUX</span
                 ><span class="header__header-owner">
@@ -322,17 +322,32 @@
             </section>
         </main>
         <footer class="footer">
-            <section class="footer__section">
+            <section class="footer__company">
                 <h2 class="footer__header">LUX Adam Jankowski</h2>
-                <p>NIP: 9562335029</p>
-                <p>Tel.: 691604580</p>
-                <p>Mail: kontakt@lux-remonty.pl</p>
-                <p>87-100 Toruń</p>
+                <p class="footer__company-detail">NIP: 9562335029</p>
+                <p class="footer__company-detail">Tel.: 691604580</p>
+                <p class="footer__company-detail">
+                    Mail: kontakt@lux-remonty.pl
+                </p>
+                <p class="footer__company-detail">87-100 Toruń</p>
             </section>
-            <section class="footer__section">
-                <p>&copy; 2020 Kacper Witas</p>
-                <a href="">Polityka prywatności</a>
-                <button class="footer_scroll-top">ARROW UP</button>
+            <section class="footer__copyrights">
+                <p class="footer__dev">
+                    &copy; 2020
+                    <a href="https://github.com/nemmtor">Kacper Witas</a>
+                </p>
+                <a href="#" class="footer__privacy">Polityka prywatności</a>
+                <button
+                    class="footer__scroll-top"
+                    data-scroll
+                    data-target="#header"
+                >
+                    <img
+                        class="footer__scroll-img"
+                        src="./assets/arrow.svg"
+                        alt="Scroll to top"
+                    />
+                </button>
             </section>
         </footer>
     </body>

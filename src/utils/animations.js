@@ -1,18 +1,18 @@
 import gsap from 'gsap';
 
-const TIME_BETWEEN_SLIDES = 3;
+const TIME_BETWEEN_SLIDES = 2;
 
-const timeline = gsap.timeline({
+const opinionsTimeline = gsap.timeline({
     repeat: -1,
     defaults: {
         stagger: 1,
         duration: 1,
         delay: TIME_BETWEEN_SLIDES,
-        ease: 'power1.in',
+        ease: 'power4.inOut',
     },
 });
 
-timeline
+opinionsTimeline
     .to('.opinion', {
         xPercent: -100,
     })
@@ -25,4 +25,22 @@ timeline
     .set('.opinion', {
         x: 0,
         delay: 0,
+    });
+
+const scrollTopTimeline = gsap.timeline({
+    repeat: -1,
+    ease: 'power3.inOut',
+});
+
+scrollTopTimeline
+    .fromTo(
+        '.footer__scroll-img',
+        { yPercent: 100 },
+        {
+            yPercent: -100,
+            duration: 2,
+        },
+    )
+    .set('.footer__scroll-img', {
+        yPercent: 100,
     });

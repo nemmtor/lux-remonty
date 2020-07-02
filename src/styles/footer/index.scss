@@ -1,0 +1,56 @@
+.footer {
+    padding: 1.2rem 0.4rem;
+    background: $dark-text;
+    color: $light-text;
+    font-size: 0.8rem;
+
+    &__header {
+        color: $contrast-color;
+        margin-bottom: 0.5rem;
+    }
+
+    &__company {
+        margin-bottom: 1rem;
+
+        &-detail {
+            margin-bottom: 0.3rem;
+        }
+    }
+
+    &__copyrights {
+        position: relative;
+    }
+
+    &__dev {
+        a {
+            text-decoration: none;
+            color: $contrast-color;
+        }
+    }
+
+    &__privacy {
+        text-decoration: none;
+        color: inherit;
+        margin-top: 1rem;
+        display: inline-block;
+    }
+
+    &__scroll-top {
+        background: transparent;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid $contrast-color;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+
+        position: absolute;
+        right: 0.5rem;
+        bottom: 50%;
+        transform: translateY(50%);
+    }
+}
