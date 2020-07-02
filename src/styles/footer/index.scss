@@ -6,14 +6,21 @@
 
     &__header {
         color: $contrast-color;
-        margin-bottom: 0.5rem;
+    }
+
+    &__slogan {
+        margin-bottom: 1rem;
+        margin-top: -0.2rem;
     }
 
     &__company {
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
 
         &-detail {
             margin-bottom: 0.3rem;
+            span {
+                color: $contrast-color;
+            }
         }
     }
 
@@ -31,7 +38,6 @@
     &__privacy {
         text-decoration: none;
         color: inherit;
-        margin-top: 1rem;
         display: inline-block;
     }
 
