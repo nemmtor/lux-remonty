@@ -29,28 +29,38 @@
             />
             <p class="nav__phone">Zadzwoń - 691 694 580</p>
             <!-- BURGER -->
-            <div class="nav__burger-container">
+            <div class="nav__burger-container closed">
                 <div class="nav__burger"></div>
             </div>
-            <ul class="nav__menu">
-                <li class="nav__menu-item">
-                    <a href="#home">Strona główna</a>
-                </li>
-                <li class="nav__menu-item">
-                    <a href="#about">Dlaczego LUX?</a>
-                </li>
-                <li class="nav__menu-item">
-                    <a href="#offer">Oferta</a>
-                </li>
-                <li class="nav__menu-item">
-                    <a href="#opinions">Opinie</a>
-                </li>
-                <li class="nav__menu-item">
-                    <a href="#contact">Kontakt</a>
-                </li>
-            </ul>
+            <div class="nav__menu-container">
+                <ul class="nav__menu nav__menu--closed">
+                    <li class="nav__menu-item" data-scroll data-target="#home">
+                        Strona główna
+                    </li>
+                    <li class="nav__menu-item" data-scroll data-target="#about">
+                        Dlaczego LUX?
+                    </li>
+                    <li class="nav__menu-item" data-scroll data-target="#offer">
+                        Oferta
+                    </li>
+                    <li
+                        class="nav__menu-item"
+                        data-scroll
+                        data-target="#opinions"
+                    >
+                        Opinie
+                    </li>
+                    <li
+                        class="nav__menu-item"
+                        data-scroll
+                        data-target="#contact"
+                    >
+                        Kontakt
+                    </li>
+                </ul>
+            </div>
         </nav>
-        <header class="header" id="header">
+        <header class="header" id="home">
             <h1 class="header__header">
                 <span class="header__header-company">LUX</span
                 ><span class="header__header-owner">
@@ -353,7 +363,7 @@
                 <button
                     class="footer__scroll-top"
                     data-scroll
-                    data-target="#header"
+                    data-target="#home"
                 >
                     <img
                         class="footer__scroll-img"

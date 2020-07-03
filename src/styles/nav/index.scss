@@ -19,7 +19,29 @@
         margin-left: 0.8rem;
     }
 
+    &__menu-container {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        min-width: 100%;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
     &__menu {
-        display: none;
+        padding: 1rem 1.5rem;
+        list-style-type: none;
+        background: #fffffa;
+        transform: translateY(-100%);
+    }
+
+    &__menu-item {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+        pointer-events: all;
+        a {
+            text-decoration: none;
+            color: $dark-text;
+        }
     }
 }
