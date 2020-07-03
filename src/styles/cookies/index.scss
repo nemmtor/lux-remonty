@@ -1,0 +1,38 @@
+.cookies {
+    background-color: rgba(20, 20, 20, 0.8);
+    font-size: 0.8rem;
+    color: #ccc;
+    line-height: 1.5;
+    padding: 0.5rem 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+
+    &__more {
+        margin-top: 1rem;
+        font-weight: 700;
+        color: $contrast-color;
+    }
+
+    &__accept {
+        position: absolute;
+        bottom: 0.5rem;
+        right: 0.5rem;
+        background: $contrast-color;
+        color: $dark-text;
+        border: none;
+        font-weight: 700;
+        padding: 0.4rem 0.9rem;
+        display: block;
+        border-radius: 5px;
+        cursor: pointer;
+        will-change: filter;
+        transition: filter 0.1s ease-in-out;
+
+        &:hover {
+            filter: brightness(1.1);
+        }
+    }
+}

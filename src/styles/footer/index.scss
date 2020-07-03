@@ -41,8 +41,8 @@
     }
 
     &__privacy {
-        text-decoration: none;
-        color: inherit;
+        margin-top: 0.5rem;
+        color: $contrast-color;
         display: inline-block;
     }
 
@@ -52,6 +52,7 @@
         height: 30px;
         border-radius: 50%;
         border: 1px solid $contrast-color;
+        cursor: pointer;
 
         display: flex;
         align-items: center;

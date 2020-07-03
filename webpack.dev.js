@@ -25,7 +25,13 @@ module.exports = merge(common, {
     },
     plugins: [
         new HtmlWebpackPlugin({
+            filename: 'index.html',
             template: './src/index.html',
+            favicon: './src/assets/favicon.png',
+        }),
+        new HtmlWebpackPlugin({
+            filename: 'polityka-prywatnosci/index.html',
+            template: './src/polityka-prywatnosci.html',
             favicon: './src/assets/favicon.png',
         }),
         new webpack.DefinePlugin({

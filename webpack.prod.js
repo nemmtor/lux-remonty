@@ -25,7 +25,20 @@ module.exports = merge(common, {
             new OptimizeCssAssetsWebpackPlugin(),
             new TerserPlugin({ sourceMap: true }),
             new HtmlWebpackPlugin({
+                filename: 'index.html',
                 template: './src/index.html',
+                favicon: './src/assets/favicon.png',
+                minify: {
+                    removeAttributeQuotes: true,
+                    collapseWhitespace: true,
+                    removeComments: true,
+                    removeScriptTypeAttributes: true,
+                },
+            }),
+            new HtmlWebpackPlugin({
+                filename: 'polityka-prywatnosci/index.html',
+                template: './src/polityka-prywatnosci.html',
+                favicon: './src/assets/favicon.png',
                 minify: {
                     removeAttributeQuotes: true,
                     collapseWhitespace: true,
