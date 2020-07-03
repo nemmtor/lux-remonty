@@ -5,7 +5,7 @@
     align-items: center;
     font-size: 0.8rem;
     padding: 0.5rem $horizontal-padding;
-    background: $light-text;
+    background: #ffffff;
     z-index: 1000;
 
     position: sticky;
@@ -31,24 +31,47 @@
     &__menu {
         padding: 1rem 1.5rem;
         list-style-type: none;
-        background: #fffffa;
+        background: #ffffff;
         transform: translateY(-100%);
         display: flex;
         flex-direction: column;
+        pointer-events: all;
     }
 
     &__menu-item {
         font-size: 1rem;
         margin-bottom: 1rem;
-        pointer-events: all;
-        padding: 1rem 0;
+        padding: 1rem 0 1rem 3rem;
         position: relative;
         display: inline-block;
         align-self: flex-end;
         will-change: filter;
         transition: filter 0.2s ease-out;
-        background: inherit;
+        background: #ffffff;
         cursor: pointer;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-image: url('../assets/construction.svg');
+            background-repeat: no-repeat;
+            background-position: center left;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0.5rem;
+            right: 0;
+            width: 100%;
+            height: 1px;
+            background: rgba(0, 0, 0, 0.6);
+            box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
         &:hover {
             filter: brightness(0.8);
         }
