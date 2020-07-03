@@ -11,13 +11,13 @@ burger.addEventListener('click', () => {
     if (isActive) {
         gsap.to('.nav__menu', {
             yPercent: 100,
-            duration: 1,
+            duration: 0.5,
             ease: 'power3.out',
         });
     } else {
         gsap.to('.nav__menu', {
             yPercent: 0,
-            duration: 0.5,
+            duration: 0.3,
             ease: 'power3.in',
         });
     }
@@ -29,7 +29,7 @@ navItems.forEach((navItem) => {
         burger.classList.add('closed');
         gsap.to('.nav__menu', {
             yPercent: 0,
-            duration: 0.5,
+            duration: 0.3,
             ease: 'power3.in',
         });
     });
