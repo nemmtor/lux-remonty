@@ -21,7 +21,7 @@
 .contact__detail {
     width: 100%;
     height: 120px;
-    margin-bottom: 3rem;
+    margin-bottom: 6rem;
     background: #ffffff;
     display: flex;
     flex-direction: column;
@@ -68,16 +68,20 @@
 
 .form {
     &__header {
-        margin-bottom: 1.5rem;
+        margin-bottom: 2rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
     }
 
     &__input,
     &__text-area {
         display: block;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
         width: 80%;
         resize: none;
         padding: 0.5rem 0.2rem;
+        border-radius: 2px;
+        border: 1px solid rgba(0, 0, 0, 0.5);
     }
 
     &__text-area {
@@ -86,11 +90,13 @@
 
     label {
         display: block;
+        margin-bottom: 0.5rem;
     }
 
     &__submit {
         padding: 0.5rem 1.5rem;
-        border: 1px solid $main-color;
+        border: 1px solid rgba(0, 0, 0, 0.5);
+        border-radius: 4px;
         background: #fff;
         color: $dark-text;
         font-weight: 700;
