@@ -20,7 +20,7 @@ module.exports = merge(common, {
         minimize: true,
         usedExports: true,
         sideEffects: true,
-        splitChunks: { chunks: 'all' },
+        splitChunks: { chunks: 'all', maxSize: 20000 },
         minimizer: [
             new OptimizeCssAssetsWebpackPlugin(),
             new TerserPlugin({ sourceMap: true }),
