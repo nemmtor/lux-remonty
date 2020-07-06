@@ -5,6 +5,31 @@
     align-items: center;
     justify-content: center;
     margin-left: auto;
+
+    &.active {
+        .nav__burger {
+            background: $light-text;
+            &::before {
+                animation: animateTopBurger 0.5s ease-in-out forwards;
+            }
+            &::after {
+                animation: animateBottomBurger 0.5s ease-in-out forwards;
+            }
+        }
+    }
+
+    &.closed {
+        .nav__burger {
+            background: $dark-text;
+            transition: 0.5s background ease-in-out;
+            &::before {
+                animation: animateTopBurgerBack 0.5s ease-in-out forwards;
+            }
+            &::after {
+                animation: animateBottomBurgerBack 0.5s ease-in-out forwards;
+            }
+        }
+    }
 }
 
 .nav__burger {
@@ -22,9 +47,57 @@
         background: $dark-text;
     }
     &::before {
-        top: 5px;
+        transform: translateY(5px);
     }
     &::after {
-        top: -5px;
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes animateTopBurger {
+    0% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(0px) rotate(45deg);
+    }
+}
+
+@keyframes animateBottomBurger {
+    0% {
+        transform: translateY(5px);
+    }
+    50% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(0px) rotate(-45deg);
+    }
+}
+
+@keyframes animateTopBurgerBack {
+    0% {
+        transform: translateY(0px) rotate(45deg);
+    }
+    50% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-5px) rotate(0deg);
+    }
+}
+
+@keyframes animateBottomBurgerBack {
+    0% {
+        transform: translateY(0px) rotate(-45deg);
+    }
+    50% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    100% {
+        transform: translateY(5px) rotate(0deg);
     }
 }

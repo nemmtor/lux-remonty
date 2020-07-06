@@ -7,8 +7,20 @@ const burger = document.querySelector('.nav__burger-container');
 const navItems = document.querySelectorAll('.nav__menu-item');
 const navMenu = document.querySelector('.nav__menu');
 
+// Animate burger on page load
+gsap.fromTo(
+    '.nav__burger-container',
+    { x: 1000 },
+    {
+        x: 0,
+        duration: 0.5,
+    },
+);
+
+// Nav menu animation
 const navTimeline = gsap.timeline({ paused: true });
 
+// Need to wrap it inside DOMContentLoaded because ::after is not ready before dom is loaded
 document.addEventListener('DOMContentLoaded', () => {
     navTimeline
         .to('.nav__menu', {

@@ -1,1 +1,0 @@
-import '../assets/hero.jpg';
