@@ -18,6 +18,14 @@ module.exports = {
                 use: ['html-loader'],
             },
             {
+                test: /\.php$/i,
+                loader: 'file-loader?{name: "[name].[ext], outputPath: "php/"}',
+            },
+            {
+                test: /\.htaccess$/i,
+                loader: 'file-loader?{name: "[name].[ext]}',
+            },
+            {
                 test: /\.(png|jpe?g|gif|ico|svg|webp)$/i,
                 loader:
                     'file-loader?{name: "[name].[ext]", outputPath: "assets/", esModule: false}',

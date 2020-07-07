@@ -6,6 +6,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OptimizeCssAssetsWebpackPlugin = require('optimize-css-assets-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const common = require('./webpack.common');
 
@@ -20,7 +21,7 @@ module.exports = merge(common, {
         minimize: true,
         usedExports: true,
         sideEffects: true,
-        splitChunks: { chunks: 'all', maxSize: 20000 },
+        splitChunks: { chunks: 'all', maxSize: 40000 },
         minimizer: [
             new OptimizeCssAssetsWebpackPlugin(),
             new TerserPlugin({ sourceMap: true }),
@@ -68,5 +69,11 @@ module.exports = merge(common, {
         }),
         new webpack.NoEmitOnErrorsPlugin(),
         new webpack.optimize.ModuleConcatenationPlugin(),
+        new CopyPlugin({
+            patterns: [
+                { from: './.htaccess' },
+                { from: './php/contactform.php', to: 'php' },
+            ],
+        }),
     ],
 });
