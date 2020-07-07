@@ -8,14 +8,10 @@ const navItems = document.querySelectorAll('.nav__menu-item');
 const navMenu = document.querySelector('.nav__menu');
 
 // Animate burger on page load
-gsap.fromTo(
-    '.nav__burger-container',
-    { x: 1000 },
-    {
-        x: 0,
-        duration: 0.5,
-    },
-);
+gsap.to('.nav__burger-container', {
+    x: 0,
+    duration: 0.5,
+});
 
 // Nav menu animation
 const navTimeline = gsap.timeline({ paused: true });
