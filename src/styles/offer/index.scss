@@ -32,6 +32,15 @@
 
 .offer__item {
     margin-bottom: 4rem;
+
+    &-header {
+        margin-bottom: 0.5rem;
+        text-transform: uppercase;
+    }
+
+    &-text {
+        max-width: 250px;
+    }
 }
 
 .offer__pricing {
