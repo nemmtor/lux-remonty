@@ -72,6 +72,8 @@ module.exports = merge(common, {
         new CopyPlugin({
             patterns: [
                 { from: './.htaccess' },
+                { from: './sitemap.xml' },
+                { from: './robots.txt' },
                 { from: './php/contactform.php', to: 'php' },
             ],
         }),
