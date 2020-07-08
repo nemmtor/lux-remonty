@@ -9,8 +9,9 @@ const navMenu = document.querySelector('.nav__menu');
 
 // Animate burger on page load
 gsap.to('.nav__burger-container', {
-    x: 0,
+    opacity: 1,
     duration: 0.5,
+    delay: 1,
 });
 
 // Nav menu animation
