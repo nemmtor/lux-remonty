@@ -25,6 +25,10 @@ $vertical-padding: 2.5rem;
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+}
+
 html {
     font-family: 'Montserrat', sans-serif;
 }
