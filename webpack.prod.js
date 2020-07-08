@@ -74,6 +74,7 @@ module.exports = merge(common, {
                 { from: './.htaccess' },
                 { from: './sitemap.xml' },
                 { from: './robots.txt' },
+                { from: './wizytowka.png' },
                 { from: './php/contactform.php', to: 'php' },
             ],
         }),
