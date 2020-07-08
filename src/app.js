@@ -11,7 +11,8 @@ import './utils/smoothScroll';
 import './styles/index.scss';
 
 AOS.init();
+
 // Scroll to top after page reload
-// window.onbeforeunload = () => {
-//     window.scrollTo(0, 0);
-// };
+window.onbeforeunload = () => {
+    window.scrollTo(0, 0);
+};
