@@ -1,6 +1,8 @@
 RewriteEngine On
-RewriteCond %{HTTPS} !=on
-RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteCond %{HTTPS} off
+RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [NE,L,R=301]
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule .* https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 <filesMatch ".(ico|pdf|flv|jpg|jpeg|png|gif|js|webp|svg|css|swf)$">
     Header set Cache-Control "max-age=31557600, public"
 </filesMatch>
