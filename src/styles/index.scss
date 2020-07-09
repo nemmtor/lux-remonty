@@ -6,6 +6,8 @@ $contrast-color: #eabc8c;
 
 $horizontal-padding: 1.5rem;
 $vertical-padding: 2.5rem;
+$horizontal-padding-m: 3rem;
+$vertical-padding-m: 4rem;
 
 @import './nav';
 @import './header';
@@ -24,7 +26,6 @@ $vertical-padding: 2.5rem;
     padding: 0;
     box-sizing: border-box;
 }
-
 
 html {
     font-family: 'Montserrat', sans-serif;

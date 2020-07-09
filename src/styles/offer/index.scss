@@ -31,8 +31,9 @@
 }
 
 .offer__text {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     line-height: 1.5;
+    max-width: 300px;
 }
 
 .offer__item {
@@ -54,4 +55,11 @@
     display: block;
     color: $contrast-color;
     font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .offer__items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 }
