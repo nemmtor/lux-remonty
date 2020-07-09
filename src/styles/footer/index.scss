@@ -13,9 +13,10 @@
         color: $contrast-color;
     }
 
-    &__slogan {
+    &__text {
         margin-bottom: 1rem;
         max-width: 200px;
+        line-height: 1.4;
     }
 
     &__company {

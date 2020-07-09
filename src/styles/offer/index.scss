@@ -30,8 +30,13 @@
     }
 }
 
+.offer__text {
+    margin-bottom: 3rem;
+    line-height: 1.5;
+}
+
 .offer__item {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 
     &-header {
         margin-bottom: 0.5rem;
@@ -40,6 +45,7 @@
 
     &-text {
         max-width: 250px;
+        line-height: 1.4;
     }
 }
 
