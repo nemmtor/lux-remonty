@@ -5,8 +5,9 @@
         text-align: center;
         text-transform: uppercase;
         padding-bottom: 0.5rem;
-        margin-bottom: 6rem;
+        margin-bottom: 3rem;
         position: relative;
+        letter-spacing: 1px;
 
         &::after {
             content: '';
@@ -24,15 +25,19 @@
 @media (min-width: 768px) {
     .section {
         padding: $vertical-padding-m $horizontal-padding-m;
+
+        &__header {
+            margin-bottom: 4rem;
+        }
     }
 }
 @media (min-width: 1024px) {
     .section {
-        padding: 5rem $horizontal-padding-l $vertical-padding-l;
+        padding: $vertical-padding-l $horizontal-padding-l;
     }
 }
 @media (min-width: 1440px) {
     .section {
-        padding: 5rem $horizontal-padding-xl $vertical-padding-xl;
+        padding: $vertical-padding-xl $horizontal-padding-xl;
     }
 }

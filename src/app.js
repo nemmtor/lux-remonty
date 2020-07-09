@@ -4,6 +4,7 @@ import 'aos/dist/aos.css';
 
 import './utils/buttonAnimation';
 import './utils/contactForm';
+import './utils/contactDetails';
 import './utils/cookieWarning';
 import './utils/navMenu';
 import './utils/opinions';

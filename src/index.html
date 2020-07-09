@@ -78,7 +78,9 @@
                 src="./assets/logo.svg"
                 alt="Lux Adam Jankowski"
             />
-            <p class="nav__phone">Zadzwoń - 691 694 580</p>
+            <p class="nav__phone">
+                Zadzwoń - <a href="tel:691694580">691 694 580</a>
+            </p>
             <!-- BURGER -->
             <div class="nav__burger-container closed">
                 <div class="nav__burger"></div>
@@ -167,16 +169,20 @@
                         </div>
                         <h3 class="about__item-header">Szybkie terminy</h3>
                         <p class="about__item-text">
-                            Nie czekaj - zadzwoń aby się umówić
+                            Nie czekaj - <strong>zadzwoń</strong> aby się umówić
                         </p>
                     </article>
                     <article class="about__item">
                         <div class="about__item-icon">
                             <img src="./assets/price.svg" alt="Etykieta" />
                         </div>
-                        <h3 class="about__item-text">
-                            Darmowa i niezobowiązująca wycena
+                        <h3 class="about__item-header">
+                            Wycena
                         </h3>
+                        <p class="about__item-text">
+                            <strong>Darmowa</strong> i
+                            <strong>niezobowiązująca</strong> wycena remontu
+                        </p>
                     </article>
                     <button
                         class="about__cta"
@@ -220,10 +226,10 @@
                             Położenie tynku od 25zł/m2
                         </p>
                     </article>
-                    <p>
-                        I wiele więcej...
-                    </p>
                 </div>
+                <p>
+                    I wiele więcej...
+                </p>
             </section>
             <section class="section" id="opinions">
                 <h2 class="section__header">Opinie</h2>
@@ -303,14 +309,20 @@
             <section class="section section--contact" id="contact">
                 <h2 class="section__header">Kontakt</h2>
                 <div class="contact__details">
-                    <div class="contact__detail" data-aos="fade-left">
+                    <div
+                        class="contact__detail contact__detail--phone"
+                        data-aos="fade-left"
+                    >
                         <div class="contact__detail-img">
                             <img src="./assets/phone.svg" alt="Telefon" />
                         </div>
                         <h3 class="contact__detail-type">Numer telefonu</h3>
                         <p class="contact__detail-content">691 694 580</p>
                     </div>
-                    <div class="contact__detail" data-aos="fade-left">
+                    <div
+                        class="contact__detail contact__detail--mail"
+                        data-aos="fade-left"
+                    >
                         <div class="contact__detail-img">
                             <img src="./assets/mail.svg" alt="E-mail" />
                         </div>
@@ -319,7 +331,10 @@
                             kontakt@lux-remonty.pl
                         </p>
                     </div>
-                    <div class="contact__detail" data-aos="fade-left">
+                    <div
+                        class="contact__detail contact__detail--fb"
+                        data-aos="fade-left"
+                    >
                         <div class="contact__detail-img">
                             <img
                                 src="./assets/facebook.svg"
@@ -354,6 +369,9 @@
                         class="form__input"
                         name="phone"
                         id="phone"
+                        minlength="9"
+                        maxlength="9"
+                        pattern="\d*"
                         required
                     />
                     <label for="msg">Treść</label>
@@ -366,6 +384,19 @@
                         placeholder="Tutaj wpisz treść..."
                         required
                     ></textarea>
+                    <label class="form__checkbox" for="zgoda">
+                        <input
+                            type="checkbox"
+                            required
+                            id="zgoda"
+                            name="zgoda"
+                        />
+                        Wyrażam zgodę na przetwarzanie danych osobowych zgodnie
+                        z ustawą o ochronie danych osobowych w związku z
+                        wysłaniem zapytania przez formularz kontaktowy. Podanie
+                        danych jest dobrowolne, ale niezbedne do przetworzenia
+                        zapytania.
+                    </label>
                     <button type="submit" class="form__submit">Wyślij</button>
                     <p class="form__greetings">
                         Dziękujemy! Wkrótce się skontaktujemy

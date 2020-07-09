@@ -114,8 +114,7 @@
         will-change: transform;
         transition: transform 0.3s ease-in-out;
 
-        &:focus,
-        &:hover {
+        &:focus {
             transform: translateY(-5px);
         }
     }
@@ -127,6 +126,11 @@
     label {
         display: block;
         margin-bottom: 0.5rem;
+    }
+
+    &__checkbox {
+        cursor: pointer;
+        max-width: 500px;
     }
 
     &__submit {
@@ -142,9 +146,10 @@
         transition: transform 0.3s ease-in-out;
         cursor: pointer;
         outline: none;
+        margin-top: 2rem;
 
         &:hover {
-            transform: translateY(-5px);
+            transform: translateY(-2px);
         }
     }
 
