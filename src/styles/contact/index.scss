@@ -1,6 +1,7 @@
 .section--contact {
     background: #fcfcfc;
     position: relative;
+    z-index: 1;
 
     &::before {
         content: '';
@@ -13,14 +14,34 @@
         transform: rotate(5deg);
         box-shadow: -2px -2px 3px rgba(0, 0, 0, 0.2);
     }
+    &::after {
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        height: 100%;
+        width: 100%;
+        opacity: 0.1;
+        background: url('../assets/hexagons.svg');
+        background-position: -160% 120%;
+        background-size: 130%;
+        background-repeat: no-repeat;
+        z-index: -1;
+    }
 }
 
 .contact__details {
     margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact__detail {
     width: 100%;
+    max-width: 400px;
     height: 120px;
     margin-bottom: 6rem;
     background: #ffffff;
@@ -29,6 +50,11 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    cursor: pointer;
+
+    &:hover &-img {
+        filter: sepia(50%);
+    }
 
     &-img {
         position: absolute;
@@ -42,6 +68,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        will-change: filter;
+        transition: filter 0.2s ease-in-out;
 
         img {
             width: 50%;
@@ -83,6 +111,13 @@
         padding: 0.5rem 0.2rem;
         border-radius: 2px;
         border: 1px solid rgba(0, 0, 0, 0.5);
+        will-change: transform;
+        transition: transform 0.3s ease-in-out;
+
+        &:focus,
+        &:hover {
+            transform: translateY(-5px);
+        }
     }
 
     &__text-area {
@@ -104,7 +139,13 @@
         text-transform: uppercase;
         position: relative;
         will-change: transform;
-        transition: transform 0.2s ease-in;
+        transition: transform 0.3s ease-in-out;
+        cursor: pointer;
+        outline: none;
+
+        &:hover {
+            transform: translateY(-5px);
+        }
     }
 
     &__greetings {
@@ -161,5 +202,40 @@
 
     .form__greetings {
         opacity: 1;
+    }
+}
+
+@media (min-width: 768px) {
+    .section--contact {
+        &::after {
+            background-position: 250% 120%;
+            background-size: 70%;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .contact__details {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .form {
+        &__input,
+        &__text-area {
+            max-width: 500px;
+            padding: 0.8rem 0.4rem;
+        }
+    }
+    .section--contact {
+        &::before {
+            height: 150px;
+            top: -45px;
+        }
+        &::after {
+            background-position: 170% -80%;
+            background-size: 70%;
+        }
     }
 }

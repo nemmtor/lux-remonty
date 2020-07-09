@@ -26,3 +26,13 @@
         padding: $vertical-padding-m $horizontal-padding-m;
     }
 }
+@media (min-width: 1024px) {
+    .section {
+        padding: 5rem $horizontal-padding-l $vertical-padding-l;
+    }
+}
+@media (min-width: 1440px) {
+    .section {
+        padding: 5rem $horizontal-padding-xl $vertical-padding-xl;
+    }
+}

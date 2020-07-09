@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 });
 
-const mobileView = window.matchMedia('screen and (max-width: 768px)');
+const mobileView = window.matchMedia('screen and (max-width: 1024px)');
 
 if (mobileView.matches) {
     burger.addEventListener('click', () => {

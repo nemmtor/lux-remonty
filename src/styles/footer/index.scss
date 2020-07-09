@@ -54,6 +54,7 @@
         border-radius: 50%;
         border: 1px solid $contrast-color;
         cursor: pointer;
+        outline: none;
 
         display: flex;
         align-items: center;
@@ -65,5 +66,32 @@
         right: 0.5rem;
         bottom: 50%;
         transform: translateY(50%);
+    }
+}
+
+@media (min-width: 1024px) {
+    .footer__company {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer__header {
+        flex-basis: 100%;
+    }
+
+    .footer__company-details {
+        margin-left: 3rem;
+    }
+
+    .footer__privacy {
+        flex-basis: 100%;
+    }
+
+    .footer__scroll-top {
+        width: 60px;
+        height: 60px;
+        img {
+            height: 60px;
+        }
     }
 }

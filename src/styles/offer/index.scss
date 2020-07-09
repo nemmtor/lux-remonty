@@ -62,4 +62,17 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
+
+    .section--offer::after {
+        background-size: 150%;
+    }
+}
+@media (min-width: 1024px) {
+    .offer__text {
+        max-width: 500px;
+    }
+
+    .offer__item-text {
+        max-width: 400px;
+    }
 }

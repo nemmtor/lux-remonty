@@ -42,6 +42,7 @@
         will-change: transform;
         position: relative;
         margin-top: 2rem;
+        outline: none;
 
         &::before {
             content: '';
@@ -72,5 +73,14 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
+    }
+}
+
+@media (min-width: 1024px) {
+    .header__container {
+        min-width: 40%;
+    }
+    .header__cta {
+        padding: 0.8rem 2rem;
     }
 }

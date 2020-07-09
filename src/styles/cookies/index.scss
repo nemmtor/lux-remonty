@@ -37,3 +37,13 @@
         }
     }
 }
+
+@media (min-width: 1024px) {
+    .cookies {
+        width: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 1rem;
+        border-radius: 10px;
+    }
+}
