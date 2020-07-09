@@ -8,6 +8,27 @@
     );
     color: $light-text;
     font-size: 0.8rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &::after {
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        height: 100%;
+        width: 100%;
+        opacity: 0.5;
+        background: url('../assets/hexagons.svg');
+        background-position: center center;
+        background-size: contain;
+        background-repeat: repeat;
+        z-index: -1;
+    }
 
     &__header {
         color: $contrast-color;
@@ -20,7 +41,11 @@
     }
 
     &__company {
-        margin-bottom: 1.5rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
         &-detail {
             margin-bottom: 0.3rem;
@@ -28,10 +53,6 @@
                 color: $contrast-color;
             }
         }
-    }
-
-    &__copyrights {
-        position: relative;
     }
 
     &__dev {
@@ -44,7 +65,8 @@
     &__privacy {
         margin-top: 0.5rem;
         color: $contrast-color;
-        display: inline-block;
+        margin-bottom: 1rem;
+        display: block;
     }
 
     &__scroll-top {
@@ -63,24 +85,24 @@
         overflow: hidden;
 
         position: absolute;
-        right: 0.5rem;
-        bottom: 50%;
-        transform: translateY(50%);
+        right: 1rem;
+        bottom: 1rem;
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .footer__company {
-        display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
+        text-align: start;
+        align-items: baseline;
+        justify-content: space-evenly;
+        width: 800px;
     }
 
     .footer__header {
         flex-basis: 100%;
-    }
-
-    .footer__company-details {
-        margin-left: 3rem;
+        margin-bottom: 1rem;
     }
 
     .footer__privacy {
@@ -88,10 +110,13 @@
     }
 
     .footer__scroll-top {
-        width: 60px;
-        height: 60px;
+        width: 45px;
+        height: 45px;
+        right: 2rem;
+        bottom: 50%;
+        transform: translateY(50%);
         img {
-            height: 60px;
+            height: 45px;
         }
     }
 }

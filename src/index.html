@@ -231,7 +231,7 @@
                     I wiele więcej...
                 </p>
             </section>
-            <section class="section" id="opinions">
+            <section class="section section--opinions" id="opinions">
                 <h2 class="section__header">Opinie</h2>
                 <div class="slider">
                     <div class="opinions">
@@ -304,114 +304,122 @@
                             </p>
                         </div>
                     </div>
+                    <!-- <button class="opinions__prev"><</button>
+                    <button class="opinions__next">></button> -->
                 </div>
             </section>
             <section class="section section--contact" id="contact">
                 <h2 class="section__header">Kontakt</h2>
-                <div class="contact__details">
-                    <div
-                        class="contact__detail contact__detail--phone"
-                        data-aos="fade-left"
-                    >
-                        <div class="contact__detail-img">
-                            <img src="./assets/phone.svg" alt="Telefon" />
+                <div class="contact__content">
+                    <div class="contact__details">
+                        <div
+                            class="contact__detail contact__detail--phone"
+                            data-aos="fade-left"
+                        >
+                            <div class="contact__detail-img">
+                                <img src="./assets/phone.svg" alt="Telefon" />
+                            </div>
+                            <h3 class="contact__detail-type">Numer telefonu</h3>
+                            <p class="contact__detail-content">691 694 580</p>
                         </div>
-                        <h3 class="contact__detail-type">Numer telefonu</h3>
-                        <p class="contact__detail-content">691 694 580</p>
-                    </div>
-                    <div
-                        class="contact__detail contact__detail--mail"
-                        data-aos="fade-left"
-                    >
-                        <div class="contact__detail-img">
-                            <img src="./assets/mail.svg" alt="E-mail" />
+                        <div
+                            class="contact__detail contact__detail--mail"
+                            data-aos="fade-left"
+                        >
+                            <div class="contact__detail-img">
+                                <img src="./assets/mail.svg" alt="E-mail" />
+                            </div>
+                            <h3 class="contact__detail-type">Adres e-mail</h3>
+                            <p class="contact__detail-content">
+                                kontakt@lux-remonty.pl
+                            </p>
                         </div>
-                        <h3 class="contact__detail-type">Adres e-mail</h3>
-                        <p class="contact__detail-content">
-                            kontakt@lux-remonty.pl
-                        </p>
-                    </div>
-                    <div
-                        class="contact__detail contact__detail--fb"
-                        data-aos="fade-left"
-                    >
-                        <div class="contact__detail-img">
-                            <img
-                                src="./assets/facebook.svg"
-                                alt="Facebook logo"
-                            />
+                        <div
+                            class="contact__detail contact__detail--fb"
+                            data-aos="fade-left"
+                        >
+                            <div class="contact__detail-img">
+                                <img
+                                    src="./assets/facebook.svg"
+                                    alt="Facebook logo"
+                                />
+                            </div>
+                            <h3 class="contact__detail-type">
+                                Facebook
+                            </h3>
+                            <p class="contact__detail-content">
+                                <a
+                                    class="contact__fb-link"
+                                    href="https://facebook.com/luxadamjankowski"
+                                    >Kliknij</a
+                                >, aby wejść na nasz profil
+                            </p>
                         </div>
-                        <h3 class="contact__detail-type">
-                            Facebook
-                        </h3>
-                        <p class="contact__detail-content">
-                            <a
-                                class="contact__fb-link"
-                                href="https://facebook.com/luxadamjankowski"
-                                >Kliknij</a
-                            >, aby wejść na nasz profil
-                        </p>
                     </div>
-                </div>
-                <form class="form" autocomplete="off">
-                    <h3 class="form__header">Wypełnij formularz</h3>
-                    <label for="name">Imię</label>
-                    <input
-                        type="text"
-                        class="form__input"
-                        name="name"
-                        id="name"
-                        required
-                    />
-                    <label for="phone">Numer telefonu</label>
-                    <input
-                        type="text"
-                        class="form__input"
-                        name="phone"
-                        id="phone"
-                        minlength="9"
-                        maxlength="9"
-                        pattern="\d*"
-                        required
-                    />
-                    <label for="msg">Treść</label>
-                    <textarea
-                        name="msg"
-                        id="msg"
-                        class="form__text-area"
-                        minlength="10"
-                        maxlength="200"
-                        placeholder="Tutaj wpisz treść..."
-                        required
-                    ></textarea>
-                    <label class="form__checkbox" for="zgoda">
+                    <form class="form" autocomplete="off">
+                        <label for="name">Imię</label>
                         <input
-                            type="checkbox"
+                            type="text"
+                            class="form__input"
+                            name="name"
+                            id="name"
                             required
-                            id="zgoda"
-                            name="zgoda"
                         />
-                        Wyrażam zgodę na przetwarzanie danych osobowych zgodnie
-                        z ustawą o ochronie danych osobowych w związku z
-                        wysłaniem zapytania przez formularz kontaktowy. Podanie
-                        danych jest dobrowolne, ale niezbedne do przetworzenia
-                        zapytania.
-                    </label>
-                    <button type="submit" class="form__submit">Wyślij</button>
-                    <p class="form__greetings">
-                        Dziękujemy! Wkrótce się skontaktujemy
-                    </p>
-                </form>
+                        <label for="phone">Numer telefonu</label>
+                        <input
+                            type="text"
+                            class="form__input"
+                            name="phone"
+                            id="phone"
+                            minlength="9"
+                            maxlength="9"
+                            pattern="\d*"
+                            required
+                        />
+                        <label for="msg">Treść</label>
+                        <textarea
+                            name="msg"
+                            id="msg"
+                            class="form__text-area"
+                            minlength="10"
+                            maxlength="200"
+                            placeholder="Tutaj wpisz treść..."
+                            required
+                        ></textarea>
+                        <label class="form__checkbox" for="zgoda">
+                            <input
+                                type="checkbox"
+                                required
+                                id="zgoda"
+                                name="zgoda"
+                            />
+                            Wyrażam zgodę na przetwarzanie danych osobowych
+                            zgodnie z ustawą o ochronie danych osobowych w
+                            związku z wysłaniem zapytania przez formularz
+                            kontaktowy. Podanie danych jest dobrowolne, ale
+                            niezbedne do przetworzenia zapytania.
+                        </label>
+                        <button type="submit" class="form__submit">
+                            Wyślij
+                        </button>
+                        <p class="form__greetings">
+                            Dziękujemy! Wkrótce się skontaktujemy
+                        </p>
+                    </form>
+                </div>
             </section>
         </main>
         <footer class="footer">
             <section class="footer__company">
-                <h2 class="footer__header">LUX Adam Jankowski</h2>
-                <p class="footer__text">
-                    Najlepsi fachowcy z Torunia. Remonty i wykończenia wnętrz.
-                    Tanio, szybko i solidnie.
-                </p>
+                <div class="footer__company-slogan">
+                    <h3 class="footer__header">LUX Adam Jankowski</h3>
+                    <p class="footer__text">
+                        Najlepsi fachowcy z Torunia. Remonty i wykończenia
+                        wnętrz. Tanio, szybko i solidnie.
+                    </p>
+                </div>
                 <div class="footer__company-details">
+                    <h3 class="footer__header">Dane firmy</h3>
                     <p class="footer__company-detail">
                         <span>Nip:</span> 9562335029
                     </p>
@@ -422,28 +430,23 @@
                         <span>Mail:</span> kontakt@lux-remonty.pl
                     </p>
                 </div>
+            </section>
+            <div class="footer__copyrights">
                 <a href="/polityka-prywatnosci" class="footer__privacy"
                     >Polityka prywatności</a
                 >
-            </section>
-            <div class="footer__copyrights">
                 <p class="footer__dev">
                     &copy; 2020
                     <a href="https://github.com/nemmtor">Kacper Witas</a>
                 </p>
-
-                <button
-                    class="footer__scroll-top"
-                    data-scroll
-                    data-target="#home"
-                >
-                    <img
-                        class="footer__scroll-img"
-                        src="./assets/arrow.svg"
-                        alt="Scroll to top"
-                    />
-                </button>
             </div>
+            <button class="footer__scroll-top" data-scroll data-target="#home">
+                <img
+                    class="footer__scroll-img"
+                    src="./assets/arrow.svg"
+                    alt="Scroll to top"
+                />
+            </button>
         </footer>
         <div class="cookies">
             <p>
