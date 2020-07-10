@@ -1,10 +1,9 @@
 import gsap from 'gsap';
 
-// const prev = document.querySelector('.opinions__prev');
-// const next = document.querySelector('.opinions__next');
+const prev = document.querySelector('.opinions__prev');
+const next = document.querySelector('.opinions__next');
 
 const TIME_BETWEEN_SLIDES = 2;
-// const ROUND_TO = 1 / 3;
 
 const opinionsTimeline = gsap.timeline({
     repeat: -1,
@@ -16,30 +15,20 @@ const opinionsTimeline = gsap.timeline({
     },
 });
 
-// const duration = opinionsTimeline.duration();
-
 opinionsTimeline
-    .to(
-        '.opinion',
-        {
-            xPercent: -100,
-        },
-        'opinion1',
-    )
-    .to(
-        '.opinion',
-        {
-            xPercent: -200,
-        },
-        'opinion2',
-    )
-    .to(
-        '.opinion',
-        {
-            xPercent: -300,
-        },
-        'opinion3',
-    )
+    .addLabel('1')
+    .to('.opinion', {
+        xPercent: -100,
+    })
+    .addLabel('2')
+    .to('.opinion', {
+        xPercent: -200,
+    })
+    .addLabel('3')
+    .to('.opinion', {
+        xPercent: -300,
+    })
+    .addLabel('4')
     .set('.opinion', {
         x: 0,
         delay: 0,
@@ -63,22 +52,30 @@ scrollTopTimeline
         yPercent: 100,
     });
 
-// prev.addEventListener('click', () => {
-//     console.log(opinionsTimeline.currentLabel());
-//     // const time =
-//     //     duration *
-//     //     Math.round(opinionsTimeline.progress() / ROUND_TO) *
-//     //     ROUND_TO;
-//     // console.log(time);
-//     // opinionsTimeline.tweenTo(time);
-//     // opinionsTimeline.resume();
-// });
+prev.addEventListener('click', () => {
+    const currentLabel = opinionsTimeline.currentLabel();
+    if (typeof currentLabel === 'undefined') {
+        opinionsTimeline.seek('3');
+    } else {
+        const nextLabel = parseInt(currentLabel, 10) - 1;
+        if (nextLabel === 0) {
+            opinionsTimeline.seek('3');
+        } else {
+            opinionsTimeline.seek(nextLabel.toString());
+        }
+    }
+});
 
-// next.addEventListener('click', () => {
-//     const time =
-//         duration *
-//         Math.round(opinionsTimeline.progress() / ROUND_TO) *
-//         ROUND_TO;
-//     opinionsTimeline.tweenTo(time);
-//     opinionsTimeline.resume();
-// });
+next.addEventListener('click', () => {
+    const currentLabel = opinionsTimeline.currentLabel();
+    if (typeof currentLabel === 'undefined') {
+        opinionsTimeline.seek('2');
+    } else {
+        const nextLabel = parseInt(currentLabel, 10) + 1;
+        if (nextLabel === 4) {
+            opinionsTimeline.seek('1');
+        } else {
+            opinionsTimeline.seek(nextLabel.toString());
+        }
+    }
+});
