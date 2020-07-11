@@ -74,7 +74,7 @@
         width: 30px;
         height: 30px;
         border-radius: 50%;
-        border: 1px solid $contrast-color;
+        border: 2px solid $contrast-color;
         cursor: pointer;
         outline: none;
 
@@ -84,9 +84,10 @@
 
         overflow: hidden;
 
-        position: absolute;
+        position: fixed;
         right: 1rem;
         bottom: 1rem;
+        z-index: 1000;
     }
 }
 
@@ -112,9 +113,6 @@
     .footer__scroll-top {
         width: 45px;
         height: 45px;
-        right: 2rem;
-        bottom: 50%;
-        transform: translateY(50%);
         img {
             height: 45px;
         }

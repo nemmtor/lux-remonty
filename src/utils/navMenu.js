@@ -14,9 +14,7 @@ gsap.to('.nav__burger-container', {
     delay: 1,
 });
 
-// Nav menu animation
 const navTimeline = gsap.timeline({ paused: true });
-
 // Need to wrap it inside DOMContentLoaded because ::after is not ready before dom is loaded
 document.addEventListener('DOMContentLoaded', () => {
     navTimeline
@@ -43,37 +41,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 });
 
-const mobileView = window.matchMedia('screen and (max-width: 1024px)');
+const toggleBurger = () => {
+    burger.classList.toggle('active');
+    burger.classList.toggle('closed');
+};
 
-if (mobileView.matches) {
-    burger.addEventListener('click', () => {
-        burger.classList.toggle('active');
-        burger.classList.toggle('closed');
-        const isActive = burger.classList.contains('active');
-        if (isActive) {
-            navTimeline.timeScale(1).play();
-        } else {
-            navTimeline.timeScale(3).reverse();
-        }
-    });
+burger.addEventListener('click', () => {
+    toggleBurger();
+    const isActive = burger.classList.contains('active');
+    if (isActive) {
+        navTimeline.timeScale(1).play();
+    } else {
+        navTimeline.timeScale(3).reverse();
+    }
+});
 
-    navItems.forEach((navItem) => {
-        navItem.addEventListener('click', () => {
-            burger.classList.remove('active');
-            burger.classList.add('closed');
-            navTimeline.timeScale(3).reverse();
-        });
+navItems.forEach((navItem) => {
+    navItem.addEventListener('click', () => {
+        toggleBurger();
+        navTimeline.timeScale(3).reverse();
     });
+});
 
-    window.addEventListener('click', (e) => {
-        if (
-            !navMenu.contains(e.target) &&
-            !navTimeline.isActive() &&
-            !burger.classList.contains('closed')
-        ) {
-            burger.classList.toggle('active');
-            burger.classList.toggle('closed');
-            navTimeline.timeScale(5).reverse();
-        }
-    });
-}
+// Close nav when clicked outside
+window.addEventListener('click', (e) => {
+    if (
+        !navMenu.contains(e.target) &&
+        !navTimeline.isActive() &&
+        !burger.classList.contains('closed')
+    ) {
+        toggleBurger();
+        navTimeline.timeScale(5).reverse();
+    }
+});

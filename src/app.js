@@ -4,14 +4,16 @@ import 'aos/dist/aos.css';
 
 import './utils/aboutCtaAnimation';
 import './utils/contactForm';
-import './utils/contactDetails';
 import './utils/cookieWarning';
+import './utils/linkContactDetails';
 import './utils/navMenu';
 import './utils/opinions';
 import './utils/smoothScroll';
 import './styles/index.scss';
 
-AOS.init();
+AOS.init({
+    once: true,
+});
 
 // Scroll to top after page reload
 // window.onbeforeunload = () => {
