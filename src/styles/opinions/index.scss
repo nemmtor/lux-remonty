@@ -4,28 +4,23 @@
 
 .slider {
     width: 100%;
-    max-width: 600px;
+    max-width: 450px;
     position: relative;
     overflow: hidden;
     margin: 0 auto;
-}
-
-.opinions {
-    width: 400%;
-    display: flex;
+    padding-bottom: 1rem;
 
     &__prev,
     &__next {
-        width: 3rem;
-        height: 3rem;
+        width: 2rem;
+        height: 2rem;
         border-radius: 50%;
         outline: none;
         opacity: 0.5;
         cursor: pointer;
         border: none;
         position: absolute;
-        bottom: 50%;
-        transform: translateY(-50%);
+        bottom: 75%;
     }
 
     &__prev {
@@ -35,6 +30,34 @@
     &__next {
         right: 0;
     }
+
+    &__indicators {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 20px;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__indicator {
+        height: 4px;
+        width: 4px;
+        background: #000;
+        opacity: 0.3;
+    }
+
+    &__indicator--1 {
+        opacity: 0.6;
+        transform: scaleY(2);
+        transform-origin: bottom;
+    }
+}
+
+.opinions {
+    width: 400%;
+    display: flex;
 }
 
 .opinion {
