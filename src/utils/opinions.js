@@ -32,24 +32,6 @@ opinionsTimeline
         delay: 0,
     });
 
-const scrollTopTimeline = gsap.timeline({
-    repeat: -1,
-    ease: 'power3.inOut',
-});
-
-scrollTopTimeline
-    .fromTo(
-        '.footer__scroll-img',
-        { yPercent: 100 },
-        {
-            yPercent: -100,
-            duration: 2,
-        },
-    )
-    .set('.footer__scroll-img', {
-        yPercent: 100,
-    });
-
 prev.addEventListener('click', () => {
     const currentLabel = opinionsTimeline.currentLabel();
     if (typeof currentLabel === 'undefined') {
