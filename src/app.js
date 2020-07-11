@@ -2,7 +2,7 @@ import 'normalize.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import './utils/buttonAnimation';
+import './utils/aboutCtaAnimation';
 import './utils/contactForm';
 import './utils/contactDetails';
 import './utils/cookieWarning';

@@ -3,14 +3,12 @@ import gsap from 'gsap';
 const prev = document.querySelector('.opinions__prev');
 const next = document.querySelector('.opinions__next');
 
-const TIME_BETWEEN_SLIDES = 2;
-
 const opinionsTimeline = gsap.timeline({
     repeat: -1,
     defaults: {
         stagger: 1,
-        duration: 1,
-        delay: TIME_BETWEEN_SLIDES,
+        duration: 0.5,
+        delay: 3,
         ease: 'power4.inOut',
     },
 });

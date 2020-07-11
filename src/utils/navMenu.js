@@ -73,7 +73,7 @@ if (mobileView.matches) {
         ) {
             burger.classList.toggle('active');
             burger.classList.toggle('closed');
-            navTimeline.timeScale(3).reverse();
+            navTimeline.timeScale(5).reverse();
         }
     });
 }
