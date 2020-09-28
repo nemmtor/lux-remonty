@@ -2,7 +2,7 @@
 
 Simple website I made for renovation company based in Poland.
 
-[Live demo](https://lux-remonty.pl)
+[Live](https://lux-remonty.pl)
 
 ## Tech stack
 
