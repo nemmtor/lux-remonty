@@ -2,11 +2,12 @@
 
 Simple website I made for renovation company based in Poland.
 
-[Live demo)[https://lux-remonty.pl)
+[Live demo](https://lux-remonty.pl)
 
 ## Tech stack
 
-- Webpack
 - HTML5
 - SCSS
-- JavaScript
+- JavaScript (with few libraries, checkout [package.json](https://github.com/nemmtor/lux-remonty/blob/master/package.json))
+- PHP just for sending e-mails through form
+- Webpack for bundling all together
