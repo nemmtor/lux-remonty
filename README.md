@@ -4,7 +4,9 @@ Simple website I made for renovation company based in Poland.
 
 [Live demo)[https://lux-remonty.pl)
 
-## Libraries used
+## Tech stack
 
--   Gsap
--   Jump.js
+- Webpack
+- HTML5
+- SCSS
+- JavaScript
